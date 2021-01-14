@@ -1,0 +1,135 @@
+:root {
+  --primary: #1e365e;
+  --primary-lighter: #0060aa;
+  --selection-bg-color: #dceef9;
+  --text-default: #444;
+  --text-grey-secondary: #6b6b6b;
+  --background-grey: #eee;
+  --background-grey-lighter: #f3f3f3;
+  --border-color: #d8d8d8;
+  --input-focus-color: #32abe2;
+}
+
+.leap-4d-date-picker.rdrDateRangePickerWrapper {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+}
+
+/* Defined Ranges */
+.rdrDefinedRangesWrapper {
+  width: 120px;
+  border-color: var(--border-color);
+}
+
+.rdrInputRanges {
+  display: none;
+}
+
+.rdrDefinedRangesWrapper .rdrStaticRangeSelected {
+  color: var(--primary-lighter) !important;
+}
+
+/* Calendar */
+.rdrDateDisplayWrapper {
+  background-color: var(--background-grey);
+}
+
+.rdrDateDisplay {
+  margin: 0.5rem 0.75rem;
+}
+
+.rdrDateDisplayItem {
+  border-radius: 2px;
+}
+
+.rdrDateDisplayItem input {
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.rdrDateDisplayItemActive {
+  border-color: var(--input-focus-color);
+}
+
+.rdrMonthAndYearWrapper {
+  height: 36px;
+  padding-top: 0;
+  /* background-color: var(--background-grey-lighter); */
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rdrMonthAndYearPickers select {
+  padding: 8px 24px 8px 8px;
+  font-size: 13px;
+  color: var(--primary);
+}
+
+.rdrMonthName {
+  padding: 1rem 0.5rem 0.5rem;
+  text-align: center;
+  color: var(--text-grey-secondary);
+}
+
+.rdrMonth {
+  padding: 0 1em 1em;
+  /* width = 3em*7 + 1em*2 paddings */
+  width: 23em;
+}
+
+.rdrDay {
+  height: 2.5em;
+  line-height: 2.5em;
+}
+
+.rdrSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
+  top: 3px;
+  bottom: 3px;
+}
+
+.rdrDayNumber span {
+  color: var(--text-grey-secondary);
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span {
+  color: var(--text-default);
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+  background-color: var(--input-focus-color);
+  bottom: 2px;
+}
+
+.rdrNextPrevButton {
+  margin: 0 0.75rem;
+  background: none;
+}
+
+.rdrNextPrevButton i {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.3964 7.14645C12.5917 6.95118 12.9083 6.95118 13.1036 7.14645L17.6036 11.6464C17.7988 11.8417 17.7988 12.1583 17.6036 12.3536L13.1036 16.8536C12.9083 17.0488 12.5917 17.0488 12.3964 16.8536C12.2012 16.6583 12.2012 16.3417 12.3964 16.1464L16.0429 12.5H6.75C6.47386 12.5 6.25 12.2761 6.25 12C6.25 11.7239 6.47386 11.5 6.75 11.5H16.0429L12.3964 7.85355C12.2012 7.65829 12.2012 7.34171 12.3964 7.14645Z' fill='%231E365E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5ZM12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 17.799 6.20101 22.5 12 22.5Z' fill='%231E365E'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+.rdrPprevButton i {
+  border: none;
+  transform: rotate(-180deg);
+}
+
+.rdrNextButton i {
+  border: none;
+  transform: none;
+}
+
+.rdrStaticRange:hover .rdrStaticRangeLabel,
+.rdrStaticRange:focus .rdrStaticRangeLabel {
+  background-color: var(--selection-bg-color);
+}
