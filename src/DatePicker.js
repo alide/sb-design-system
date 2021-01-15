@@ -8,16 +8,6 @@ import './datePicker.css';
 import { DateRangePicker } from 'react-date-range';
 
 export function DatePicker({ block, ...props }) {
-  const handleSelect = (ranges) => {
-    console.log(ranges);
-  };
-
-  const selectionRange = {
-    startDate: new Date(),
-    endDate: new Date(),
-    key: 'selection',
-  };
-
   const [ranges, setRanges] = useState([
     {
       startDate: new Date(),

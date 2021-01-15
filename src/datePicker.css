@@ -4,6 +4,7 @@
   --selection-bg-color: #dceef9;
   --text-default: #444;
   --text-grey-secondary: #6b6b6b;
+  --text-muted: #aab0b8;
   --background-grey: #eee;
   --background-grey-lighter: #f3f3f3;
   --border-color: #d8d8d8;
@@ -25,7 +26,8 @@
 }
 
 .rdrDefinedRangesWrapper .rdrStaticRangeSelected {
-  color: var(--primary-lighter) !important;
+  color: var(--primary) !important;
+  background-color: var(--selection-bg-color);
 }
 
 /* Calendar */
@@ -62,6 +64,11 @@
   padding: 8px 24px 8px 8px;
   font-size: 13px;
   color: var(--primary);
+  border-radius: 0;
+}
+
+.rdrMonthAndYearPickers select:hover {
+  background-color: var(--selection-bg-color);
 }
 
 .rdrMonthName {
@@ -81,6 +88,11 @@
   line-height: 2.5em;
 }
 
+.rdrWeekDay {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
 .rdrSelected,
 .rdrInRange,
 .rdrStartEdge,
@@ -97,7 +109,7 @@
 .rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span,
 .rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span,
 .rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span {
-  color: var(--text-default);
+  color: var(--primary);
 }
 
 .rdrDayToday .rdrDayNumber span:after {
