@@ -102,7 +102,7 @@
 }
 
 .rdrDayNumber span {
-  color: var(--text-grey-secondary);
+  color: var(--text-default);
 }
 
 .rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span,
