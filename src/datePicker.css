@@ -117,6 +117,10 @@
   color: var(--primary);
 }
 
+.rdrDayToday .rdrDayNumber span {
+  font-weight: 600;
+}
+
 .rdrDayToday .rdrDayNumber span:after {
   background-color: var(--input-focus-color);
   bottom: 2px;
