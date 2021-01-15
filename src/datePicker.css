@@ -30,6 +30,11 @@
   background-color: var(--selection-bg-color);
 }
 
+.rdrStaticRangeLabel {
+  line-height: 1rem;
+  padding: 0.625rem 1.5rem;
+}
+
 /* Calendar */
 .rdrDateDisplayWrapper {
   background-color: var(--background-grey);
@@ -53,7 +58,7 @@
 }
 
 .rdrMonthAndYearWrapper {
-  height: 36px;
+  height: 2rem;
   padding-top: 0;
   /* background-color: var(--background-grey-lighter); */
   border-top: 1px solid var(--border-color);
@@ -72,25 +77,25 @@
 }
 
 .rdrMonthName {
-  padding: 1rem 0.5rem 0.5rem;
+  padding: 0.75rem 0.5rem 0.5rem;
   text-align: center;
   color: var(--text-grey-secondary);
 }
 
 .rdrMonth {
-  padding: 0 1em 1em;
-  /* width = 3em*7 + 1em*2 paddings */
-  width: 23em;
+  padding: 0 1em 0.5em;
+  width: 18.5em;
 }
 
 .rdrDay {
-  height: 2.5em;
-  line-height: 2.5em;
+  height: 2.25em;
+  line-height: 2.25em;
 }
 
 .rdrWeekDay {
   color: var(--text-muted);
   font-weight: 600;
+  line-height: 2.25em;
 }
 
 .rdrSelected,
