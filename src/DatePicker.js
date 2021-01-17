@@ -7,7 +7,7 @@ import './datePicker.css';
 
 import { DateRangePicker } from 'react-date-range';
 
-export function DatePicker({ block, ...props }) {
+export function DatePicker({ isDateRange, ...props }) {
   const [ranges, setRanges] = useState([
     {
       startDate: new Date(),
@@ -24,16 +24,16 @@ export function DatePicker({ block, ...props }) {
       dateDisplayFormat="P"
       months={2}
       direction="horizontal"
-      rangeColors={['#dceef9']}
+      rangeColors={['var(--selection-bg-color, #dceef9)']}
       className="leap-4d-date-picker"
     />
   );
 }
 
 DatePicker.propTypes = {
-  block: PropTypes.bool,
+  isDateRange: PropTypes.bool,
 };
 
 DatePicker.defaultProps = {
-  block: false,
+  isDateRange: false,
 };

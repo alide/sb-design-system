@@ -15,5 +15,5 @@ export const DateRange = (args) => (
 );
 
 DateRange.args = {
-  block: true,
+  isDateRange: true,
 };
