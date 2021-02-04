@@ -6,6 +6,7 @@ import { DatePicker } from './DatePicker';
 export default {
   title: 'Design System/DatePicker',
   component: DatePicker,
+  decorators: [(Story) => <div style={{ margin: '3em' }}><Story/></div>]
 };
 
 export const DateRange = (args) => (
