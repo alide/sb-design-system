@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas, ArgsTable, Preview } from '@storybook/addon-docs/blocks';
+
+import { Input } from './Input';
+
+<Meta title="Design System/Input" component={Input} />
+
+# Basic Input
+
+<Preview withToolbar>
+  <Story name="Standard">
+    <Input />
+  </Story>
+</Preview>
+
+<ArgsTable of={Input} />
+
+# Sizes
+
+<Story name="Sizes">
+  <div style={{margin: '1rem'}}>
+    <Input size="sm" placeholder="Small size"/>
+  </div>
+  <div style={{margin: '1rem'}}>
+    <Input placeholder="Regular size" />
+  </div>
+</Story>

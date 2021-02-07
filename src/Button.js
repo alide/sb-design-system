@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { darken, rgba } from 'polished';
-import { color, typography } from './shared/styles';
+import { color, typography, spacing } from './shared/styles';
 import { easing } from './shared/animation';
 
 const Text = styled.span`
@@ -34,7 +34,7 @@ const SIZES = {
 
 const StyledButton = styled.button`
   border: 0;
-  border-radius: 3em;
+  border-radius: ${spacing.borderRadius.default};
   cursor: pointer;
   display: inline-block;
   overflow: hidden;

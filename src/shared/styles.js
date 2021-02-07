@@ -1,5 +1,7 @@
 import { css } from 'styled-components';
 
+const tokens = require('./design-tokens.json');
+
 // Global style variables
 export const background = {
   app: '#F6F9FC',
@@ -11,8 +13,8 @@ export const background = {
 
 export const color = {
   // Palette
-  primary: '#FF4785', // coral
-  secondary: '#1EA7FD', // ocean
+  primary: tokens.primary.primary.value,
+  secondary: tokens.primary.secondary.value,
   tertiary: '#DDDDDD',
 
   orange: '#FC521F',
@@ -49,7 +51,7 @@ export const spacing = {
   },
   borderRadius: {
     small: 5,
-    default: 10,
+    default: 0,
   },
 };
 
