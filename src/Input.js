@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { color, typography } from './shared/styles';
+import { color, spacing, typography } from './shared/styles';
 
 const InputElement = styled.input`
-  border: 1px solid ${color.mediumdark};
+  border: 1px solid ${color.background.primaryDark};
+  color: ${color.text.default};
   &:focus {
-    border: 1px solid ${color.primary};
+    border: 1px solid ${color.border.focus};
   }
   line-height: 1;
-  padding: 4px 8px;
+  padding: ${spacing.insetFormControl.regular.y}px
+    ${spacing.insetFormControl.regular.x}px;
   ${(props) =>
-    props.size === 'sm' &&
+    props.size === 'compact' &&
     css`
-      padding: 2px 8px;
+      padding: ${spacing.insetFormControl.compact.y}px
+        ${spacing.insetFormControl.compact.x}px;
     `}
 `;
 
@@ -26,5 +29,5 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  size: 'md',
+  size: 'regular',
 };

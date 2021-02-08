@@ -1,6 +1,18 @@
 import { css } from 'styled-components';
 
-const tokens = require('./design-tokens.json');
+// const tokens = require('./design-tokens.json');
+
+import * as tokens from './design-tokens.json';
+
+// Primitives
+const space = {
+  xxs: 2,
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 32,
+  xl: 64
+}
 
 // Global style variables
 export const background = {
@@ -14,6 +26,7 @@ export const background = {
 export const color = {
   // Palette
   primary: tokens.primary.primary.value,
+  primaryLighter: tokens.primary['primary lighter'].value,
   secondary: tokens.primary.secondary.value,
   tertiary: '#DDDDDD',
 
@@ -35,12 +48,31 @@ export const color = {
   darker: '#444444',
   darkest: '#333333',
 
-  border: 'rgba(0,0,0,.1)',
+  border: {
+    default: tokens.border.primary.value,
+    focus: '#32abe2',
+  },
 
   // Status
   positive: '#66BF3C',
   negative: '#FF4400',
   warning: '#E69D00',
+
+  // Text
+  text: {
+    default: tokens.text.text.value,
+    secondary: tokens.text.secondary.value,
+    grey: tokens.text['gray secondary'].value,
+    muted: tokens.text.muted.value,
+  },
+
+  // Background
+  background: {
+    primary: tokens.background.primary.value,
+    secondary: tokens.background.secondary.value,
+    primaryDark: tokens.background['primary dark'].value,
+    secondaryDark: tokens.background['secondary dark'].value,
+  }
 };
 
 export const spacing = {
@@ -53,6 +85,10 @@ export const spacing = {
     small: 5,
     default: 0,
   },
+  insetFormControl: {
+    compact: {x: 0, y: space.xxs},
+    regular: { x: space.sm, y: space.xs},
+  }
 };
 
 export const typography = {
