@@ -44,14 +44,14 @@ const BadgeWrapper = styled.div`
     props.status === 'error' &&
     css`
       color: ${color.lightest};
-      background: ${color.negative};
+      background: ${background.error};
     `};
 
   ${props =>
     props.status === 'neutral' &&
     css`
       color: ${color.dark};
-      background: ${color.mediumlight};
+      background: ${color.background.primary};
     `};
 `;
 
